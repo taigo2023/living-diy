@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   devise_for :admins, controllers: {
     sessions: 'admin/sessions'
   }
@@ -6,4 +7,5 @@ Rails.application.routes.draw do
     sessions: 'user/sessions',
     registrations: 'user/registrations'
   }
+  root 'home#index'
 end
