@@ -8,4 +8,11 @@ Rails.application.routes.draw do
     registrations: 'user/registrations'
   }
   root 'home#index'
+
+  namespace :admin do
+    resources :products, only: %i[index show new create edit update]
+  end
+ 
+  get '/up/', to: 'up#index', as: :up
+  get '/up/databases', to: 'up#databases', as: :up_databases
 end
