@@ -90,4 +90,8 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
+
+ # Ensure the assets are precompiled
+config.assets.precompile += %w( application.tailwind.css application.css )
+
 end
