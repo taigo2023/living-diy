@@ -5,7 +5,11 @@ module.exports = {
     './public/**/*.html',      // public フォルダ内の HTML ファイルも監視
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'custom-background': "url('/images/background.png')", // ここに画像のパスを追加
+      },
+    },
   },
   plugins: [],
 }
