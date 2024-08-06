@@ -1,6 +1,10 @@
 class ApplicationController < ActionController::Base
   before_action :authenticate_user!, unless: :admin_namespace?
 
+  def manifest
+    send_file Rails.root.join('public', 'site.webmanifest'), type: 'application/manifest+json', disposition: 'inline'
+  end
+
   private
 
   def authenticate_admin!
