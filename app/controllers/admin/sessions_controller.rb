@@ -1,6 +1,12 @@
 # frozen_string_literal: true
 
 class Admin::SessionsController < Devise::SessionsController
+  def destroy
+    Rails.logger.debug 'Destroy action called'
+    super
+  end
+
+  # You can uncomment and use these if needed
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in
