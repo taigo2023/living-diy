@@ -2,14 +2,13 @@
 <html lang="en">
   <head>
     <title>Living.DIY</title>
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="A production ready example Rails app that's using Docker and Docker Compose.">
-
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    
+   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
 
     <%# Generated with: https://realfavicongenerator.net/ %>
@@ -57,9 +56,9 @@
                             <p class="text-sm font-medium leading-5 text-gray-900 truncate"><%= current_admin.email %></p>
                           </div>
                           <div class="py-1">
-                            <%= link_to destroy_admin_session_path, data: { turbo_method: :delete }, class: "text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left" do %>
-                              Sign out
-                            <% end %>
+                          <%= link_to destroy_admin_session_path, data: { turbo_method: :delete }, class: "text-gray-700 flex justify-between w-full px-4 py-2 text-sm leading-5 text-left" do %>
+                            Sign out
+                          <% end %>
                           </div>
                         </div>
                       </div>
@@ -135,7 +134,7 @@
 
     <style>
     .dropdown:focus-within .dropdown-menu {
-      opacity:1;
+      opacity: 1;
       transform: translate(0) scale(1);
       visibility: visible;
     }
@@ -146,5 +145,6 @@
         Copyright © Living.DIY All Rights Reserved.
       </p>
     </footer>
+    <%= javascript_importmap_tags %>
   </body>
 </html>
